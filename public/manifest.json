@@ -2,12 +2,12 @@
   "name": "LinguaFlow - 多语种在线学习平台",
   "short_name": "LinguaFlow",
   "description": "沉浸式多语种在线学习平台，支持英语、日语、韩语学习",
-  "start_url": "/",
+  "start_url": "/linguaflow/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#4f46e5",
   "orientation": "portrait-primary",
-  "scope": "/",
+  "scope": "/linguaflow/",
   "lang": "zh-CN",
   "categories": ["education", "languages"],
   "icons": [
@@ -42,22 +42,22 @@
       "name": "单词学习",
       "short_name": "单词",
       "description": "开始单词记忆学习",
-      "url": "/vocabulary",
-      "icons": [{ "src": "/favicon.svg", "sizes": "any" }]
+      "url": "/linguaflow/vocabulary",
+      "icons": [{ "src": "/linguaflow/favicon.svg", "sizes": "any" }]
     },
     {
       "name": "语法练习",
       "short_name": "语法",
       "description": "开始语法练习",
-      "url": "/grammar",
-      "icons": [{ "src": "/favicon.svg", "sizes": "any" }]
+      "url": "/linguaflow/grammar",
+      "icons": [{ "src": "/linguaflow/favicon.svg", "sizes": "any" }]
     },
     {
       "name": "成就中心",
       "short_name": "成就",
       "description": "查看你的学习成就",
-      "url": "/achievements",
-      "icons": [{ "src": "/favicon.svg", "sizes": "any" }]
+      "url": "/linguaflow/achievements",
+      "icons": [{ "src": "/linguaflow/favicon.svg", "sizes": "any" }]
     }
   ]
 }

@@ -1,7 +1,8 @@
 const CACHE_NAME = 'linguaflow-v1';
+const BASE_URL = '/linguaflow';
 const urlsToCache = [
-  '/',
-  '/index.html',
+  BASE_URL + '/',
+  BASE_URL + '/index.html',
 ];
 
 // 安装事件 - 缓存资源
@@ -34,6 +35,13 @@ self.addEventListener('activate', (event) => {
 
 // 获取事件 - 缓存优先策略
 self.addEventListener('fetch', (event) => {
+  const url = new URL(event.request.url);
+  
+  // 只缓存同源请求
+  if (url.origin !== self.location.origin) {
+    return;
+  }
+  
   event.respondWith(
     caches.match(event.request)
       .then((response) => {
@@ -59,7 +67,9 @@ self.addEventListener('fetch', (event) => {
       })
       .catch(() => {
         // 离线时返回离线页面
-        return caches.match('/index.html');
+        if (event.request.mode === 'navigate') {
+          return caches.match(BASE_URL + '/index.html');
+        }
       })
   );
 });

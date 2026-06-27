@@ -42,7 +42,7 @@ function AppLayout({ children }: { children: React.ReactNode }) {
 
 export default function App() {
   return (
-    <Router>
+    <Router basename="/linguaflow">
       <AppLayout>
         <Suspense fallback={<LoadingSpinner />}>
           <Routes>

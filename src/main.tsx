@@ -6,7 +6,7 @@ import './index.css'
 // 注册 Service Worker (PWA 离线支持)
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js')
+    navigator.serviceWorker.register('/linguaflow/sw.js', { scope: '/linguaflow/' })
       .then(registration => {
         console.log('SW registered:', registration.scope)
       })
