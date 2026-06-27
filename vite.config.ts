@@ -29,13 +29,7 @@ export default defineConfig({
     chunkSizeWarningLimit: 600,
   },
   plugins: [
-    react({
-      babel: {
-        plugins: [
-          'react-dev-locator',
-        ],
-      },
-    }),
+    react(),
     tsconfigPaths()
   ],
 })
