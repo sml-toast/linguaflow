@@ -8,7 +8,7 @@ import { Button } from '../components/common/Button';
 import { Sidebar } from '../components/layout/Sidebar';
 import { 
   Flame, Clock, BookOpen, Trophy, Star, Target, TrendingUp,
-  ArrowRight, Play, Book, Mic, Headphones, GraduationCap
+  ArrowRight, Play, Book, Mic, Headphones, GraduationCap, Globe
 } from 'lucide-react';
 import { courses, languageNames, levelNames } from '../data/courses';
 import { getUserLevel } from '../data/achievements';
@@ -35,6 +35,10 @@ export function Dashboard() {
     { icon: GraduationCap, title: '语法练习', desc: '互动例句', color: 'bg-secondary-500', path: '/grammar' },
     { icon: Mic, title: '口语跟读', desc: '智能评分', color: 'bg-pink-500', path: '/speaking' },
     { icon: Headphones, title: '听力训练', desc: '逐句听写', color: 'bg-accent-500', path: '/listening' },
+  ];
+
+  const tools = [
+    { icon: Globe, title: '图标获取', desc: '网站 favicon', color: 'bg-indigo-500', path: '/icon-finder' },
   ];
 
   if (!user) {
@@ -202,6 +206,25 @@ export function Dashboard() {
                 </div>
                 <h3 className="font-bold text-gray-900 mb-1">{module.title}</h3>
                 <p className="text-sm text-gray-500">{module.desc}</p>
+              </Card>
+            ))}
+          </div>
+
+          {/* Tools */}
+          <h2 className="text-xl font-bold text-gray-900 mb-4">实用工具</h2>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+            {tools.map((tool, index) => (
+              <Card
+                key={index}
+                variant="interactive"
+                className="text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-2"
+                onClick={() => navigate(tool.path)}
+              >
+                <div className={`w-14 h-14 ${tool.color} rounded-xl flex items-center justify-center mx-auto mb-3`}>
+                  <tool.icon className="text-white" size={24} />
+                </div>
+                <h3 className="font-bold text-gray-900 mb-1">{tool.title}</h3>
+                <p className="text-sm text-gray-500">{tool.desc}</p>
               </Card>
             ))}
           </div>

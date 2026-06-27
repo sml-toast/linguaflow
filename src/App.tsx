@@ -15,6 +15,7 @@ const Listening = lazy(() => import("./pages/Listening").then(module => ({ defau
 const Achievements = lazy(() => import("./pages/Achievements").then(module => ({ default: module.Achievements })));
 const Community = lazy(() => import("./pages/Community").then(module => ({ default: module.Community })));
 const Profile = lazy(() => import("./pages/Profile").then(module => ({ default: module.Profile })));
+const IconFinder = lazy(() => import("./pages/IconFinder").then(module => ({ default: module.IconFinder })));
 
 // 加载动画组件
 function LoadingSpinner() {
@@ -61,6 +62,7 @@ export default function App() {
             <Route path="/achievements" element={<Achievements />} />
             <Route path="/community" element={<Community />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/icon-finder" element={<IconFinder />} />
           </Routes>
         </Suspense>
       </AppLayout>
