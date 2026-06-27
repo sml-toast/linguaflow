@@ -138,7 +138,7 @@ export function IconFinder() {
                 className="w-full pl-12 pr-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
               />
             </div>
-            <Button onClick={handleSearch} size="lg" isLoading={isLoading}>
+            <Button onClick={handleSearch} size="lg" loading={isLoading}>
               <Search className="mr-2" size={20} />
               获取图标
             </Button>
