@@ -8,6 +8,26 @@ export default defineConfig({
   base: './',
   build: {
     sourcemap: 'hidden',
+    // 代码分割优化
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          // 第三方库分割
+          'vendor-react': ['react', 'react-dom'],
+          'vendor-router': ['react-router-dom'],
+          'vendor-ui': ['lucide-react'],
+          'vendor-state': ['zustand'],
+        },
+        // 更小的 chunk 文件名
+        chunkFileNames: 'assets/[name]-[hash].js',
+        entryFileNames: 'assets/[name]-[hash].js',
+        assetFileNames: 'assets/[name]-[hash].[ext]',
+      },
+    },
+    // 启用 CSS 代码分割
+    cssCodeSplit: true,
+    // 更大的 chunk 大小警告限制
+    chunkSizeWarningLimit: 600,
   },
   plugins: [
     react({
@@ -25,7 +45,7 @@ export default defineConfig({
       clickUrl: 'https://www.trae.ai/solo?showJoin=1',
       autoTheme: true,
       autoThemeTarget: '#root'
-    }), 
+    }),
     tsconfigPaths()
   ],
 })

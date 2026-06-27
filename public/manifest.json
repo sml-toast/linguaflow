@@ -1,0 +1,63 @@
+{
+  "name": "LinguaFlow - 多语种在线学习平台",
+  "short_name": "LinguaFlow",
+  "description": "沉浸式多语种在线学习平台，支持英语、日语、韩语学习",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4f46e5",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "zh-CN",
+  "categories": ["education", "languages"],
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshot-wide.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "学习中心界面"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "单词学习",
+      "short_name": "单词",
+      "description": "开始单词记忆学习",
+      "url": "/vocabulary",
+      "icons": [{ "src": "/favicon.svg", "sizes": "any" }]
+    },
+    {
+      "name": "语法练习",
+      "short_name": "语法",
+      "description": "开始语法练习",
+      "url": "/grammar",
+      "icons": [{ "src": "/favicon.svg", "sizes": "any" }]
+    },
+    {
+      "name": "成就中心",
+      "short_name": "成就",
+      "description": "查看你的学习成就",
+      "url": "/achievements",
+      "icons": [{ "src": "/favicon.svg", "sizes": "any" }]
+    }
+  ]
+}

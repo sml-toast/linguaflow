@@ -69,7 +69,7 @@ export function Dashboard() {
           {/* Stats Cards */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
             {stats.map((stat, index) => (
-              <Card key={index} className="text-center">
+              <Card key={index} className="text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
                 <stat.icon className={`mx-auto mb-2 ${stat.color}`} size={28} />
                 <p className="text-2xl font-bold text-gray-900">{stat.value}</p>
                 <p className="text-sm text-gray-500">{stat.label}</p>
@@ -194,10 +194,10 @@ export function Dashboard() {
               <Card
                 key={index}
                 variant="interactive"
-                className="text-center"
+                className="text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-2"
                 onClick={() => navigate(`${module.path}/${selectedLang}-a1`)}
               >
-                <div className={`w-14 h-14 ${module.color} rounded-xl flex items-center justify-center mx-auto mb-3`}>
+                <div className={`w-14 h-14 ${module.color} rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300`}>
                   <module.icon className="text-white" size={24} />
                 </div>
                 <h3 className="font-bold text-gray-900 mb-1">{module.title}</h3>
